@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Room</title>
+    <link rel="stylesheet" href="/frontend/Asset/styles.css"> <!-- Link to shared CSS file -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">Admin<span>Dashboard</span></div>
+        <nav class="nav">
+            <a href="/" onclick="if (location.pathname === '/') location.reload()">Dashboard</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2>Add New Room</h2>
+            <form id="roomForm" enctype="multipart/form-data">
+                <label for="room_name">Room Name:</label>
+                <input type="text" id="room_name" name="room_name" required>
+            
+                <label for="room_floor_no">Floor Number:</label>
+                <input type="number" id="room_floor_no" name="room_floor_no" required>
+            
+                <label for="room_shape">Room Shape:</label>
+                <select id="room_shape" name="room_shape" required>
+                    <option value="rectangle">Rectangle</option>
+                    <option value="semicircle">Semicircle</option>
+                    <option value="square">Square</option>
+                </select>
+            
+                <label for="gridxx">Grid XX:</label>
+                <input type="text" id="gridxx" name="gridxx" required>
+            
+                <label for="gridxy">Grid XY:</label>
+                <input type="text" id="gridxy" name="gridxy" required>
+            
+                <label for="gridyx">Grid YX:</label>
+                <input type="text" id="gridyx" name="gridyx" required>
+            
+                <label for="gridyy">Grid YY:</label>
+                <input type="text" id="gridyy" name="gridyy" required>
+            
+                <label for="map_id">Map ID:</label>
+                <input type="text" id="map_id" name="map_id">
+            
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="responseMessage">Please fill out the form and submit.</div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Admin Dashboard. All Rights Reserved.</p>
+        <p>Powered by <a href="https://example.com" target="_blank">YourCompany</a></p>
+    </footer>
+
+    <script src="/frontend/Room/script.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>

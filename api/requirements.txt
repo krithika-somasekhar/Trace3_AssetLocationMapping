@@ -1,0 +1,13 @@
+# dependencies
+Flask
+opencv-python
+numpy
+pillow
+pdf2image
+PyMySQL
+cryptography
+blinker
+Flask-Cors
+Werkzeug
+click
+Jinja2

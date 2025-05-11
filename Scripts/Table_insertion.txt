@@ -1,0 +1,121 @@
+-- Room table data insertion
+
+INSERT INTO Room (room_id, room_name, room_floor_no, room_shape, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (1, 'Room_1', 1, 'rectangle', '13, 7', '16, 7', '13,14', '16,14', 1);
+
+INSERT INTO Room (room_id, room_name, room_floor_no, room_shape, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (2, 'Room_2', 1, 'rectangle', '16, 7', '20, 7', '16, 9', '20, 9', 1);
+
+INSERT INTO Room (room_id, room_name, room_floor_no, room_shape, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (3, 'Room_3', 1, 'rectangle', '20, 7', '22, 7', '20, 9', '22, 9', 1);
+
+INSERT INTO Room (room_id, room_name, room_floor_no, room_shape, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (4, 'Room_4', 1, 'rectangle', '22, 7', '25, 7', '22, 9', '25, 9', 1);
+
+INSERT INTO Room (room_id, room_name, room_floor_no, room_shape, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (5, 'Room_5', 1, 'rectangle', '25, 7', '30, 7', '26, 9', '30, 9', 1);
+
+INSERT INTO Room (room_id, room_name, room_floor_no, room_shape, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (6, 'Room_6', 2, 'rectangle', '17,7', '27,7', '17,12', '27,12', 2);
+
+INSERT INTO Room (room_id, room_name, room_floor_no, room_shape, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (7, 'Room_7', 2, 'square', '27,7', '41,7', '27,18', '41,18', 2);
+
+INSERT INTO Room (room_id, room_name, room_floor_no, room_shape, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (8, 'Room_8', 2, 'square', '17,12', '24,12', '17,18', '24,18', 2);
+
+INSERT INTO Room (room_id, room_name, room_floor_no, room_shape, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (9, 'Room_9', 2, 'rectangle', '41,7', '49,7', '41,12', '49,12', 2);
+
+INSERT INTO Room (room_id, room_name, room_floor_no, room_shape, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (10, 'Room_10', 2, 'rectangle', '41,12', '49,12', '41,18', '49,18', 2);
+
+INSERT INTO Room (room_id, room_name, room_floor_no, room_shape, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (11, 'Room_11', 2, 'rectangle', '17,18', '41,18', '17,25', '41,27', 2);
+
+
+-- Asset table insertion
+
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy)
+VALUES (1, 'UF-4857', 'HVAC', 1, 1, 22, 9 );
+ 
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy) 
+VALUES (6, 'QH-3055', 'HVAC', 1, 1, 21, 9);
+  
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy) 
+VALUES (7, 'WF-4092', 'Projector', 2, 2, 26, 9);
+  
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy)
+VALUES (8, 'NU-9674', 'Printer', 6, 3, 30, 9);
+
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy) 
+VALUES (4, 'WO-4862', 'Projector', 2, 4, 34, 10);
+
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy) 
+VALUES (5, 'SV-7877', 'Server', 4, 5, 40, 10);
+
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy)
+VALUES (2, 'ES-2564', 'Projector', 2, 2, 27, 9);
+
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy)
+VALUES (3, 'EX-3771', 'Laptop', 3, 3, 31, 9);
+
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy)
+VALUES (11, 'smith school printer', 'Printer', 6, 3, 22, 15);
+
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy)
+VALUES (12, 'smith school router', 'router', 5, 7, 28, 13);
+
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy)
+VALUES (13, 'smith school HVAC', 'HVAC', 1, 7, 21, 17);
+
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy)
+VALUES (14, 'HP Printer 2', 'Printer', 6, 8, 45, 8);
+
+
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy)
+VALUES (15, 'Macbook', 'Laptop', 3, 9, 46, 8);
+
+
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy)
+VALUES (16, 'Main Server 1', 'Server', 4, 10, 46, 18);
+
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy)
+VALUES (17, 'Main Server 2', 'Server', 4, 10, 45, 18);
+
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy)
+VALUES (18, 'Projector 1', 'Projector', 2, 11, 33, 23);
+
+
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy)
+VALUES (19, 'Macbook Air 13', 'Laptop', 3, 11, 21, 21);
+
+INSERT INTO Asset (asset_id, asset_name, asset_type, asset_thumb_id, room_id, gridx, gridy)
+VALUES (20, 'Macbook Pro 13', 'Laptop', 3, 11, 20, 20);
+
+-- Department table insertion
+
+INSERT INTO Department (department_id, department_name, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (1, 'Department_1', '19, 7', '19, 17', '29, 7', '29, 17', 1);
+INSERT INTO Department (department_id, department_name, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (2, 'Department_2', '29, 7', '44, 7', '29, 17', '44, 17', 1);
+INSERT INTO Department (department_id, department_name, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (4, 'Department_4', '42, 6 ', '42, 25', '50, 6', '50, 25', 2);
+
+INSERT INTO Department (department_id, department_name, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (3, 'Department_3', '17,7 ', '42,7 ', '17,17', '42,17', 2);
+
+INSERT INTO Department (department_id, department_name, gridxx, gridxy, gridyx, gridyy, map_id) 
+VALUES (5, 'Department_5', '17,18','41,18','17,25', '41,27', 2);
+
+-- contract table insertion
+
+INSERT INTO Contract (contract_id, start_date, end_date, is_expired_flag, asset_id) VALUES (48, 2020-08-06, 2025-07-05, False, 1);
+INSERT INTO Contract (contract_id, start_date, end_date, is_expired_flag, asset_id) VALUES (45, 2021-02-13, 2025-02-13, True, 2);
+INSERT INTO Contract (contract_id, start_date, end_date, is_expired_flag, asset_id) VALUES (32, 2024-01-09, 2026-03-24, False, 5);
+INSERT INTO Contract (contract_id, start_date, end_date, is_expired_flag, asset_id) VALUES (4, 2022-07-11, 2027-11-16, True, 8);
+
+-- update script for asset table after asset table change
+
+update asset set department_id = 1 where asset_id in (1,2,6,7);
+update asset set department_id = 2 where asset_id in (3,4,5,8);

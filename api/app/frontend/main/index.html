@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="/frontend/main/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM6D7Hsi0DhtFO7tWW3LSTLljBF2coQm68ukPt" crossorigin="anonymous">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">Admin<span>Dashboard</span></div>
+    <nav class="nav">
+        <a href="/" onclick="if (location.pathname === '/') location.reload()">Dashboard</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Welcome to Admin Dashboard</h1>
+    <p>Select an action:</p>
+
+    <!-- Creative Toggle Switch -->
+    <div class="creative-toggle">
+        <div id="toggleSwitch" class="toggle-switch">
+            <span id="adminLabel" class="toggle-option">Admin</span>
+            <span id="userLabel" class="toggle-option">User</span>
+            <div id="toggleKnob" class="toggle-knob"></div>
+        </div>
+    </div>
+
+    <div class="button-container" id="adminButtons">
+        <div class="card">
+            <i class="fas fa-box"></i>
+            <a href="/assets">Add/Update Assets</a>
+        </div>
+        <div class="card">
+            <i class="fas fa-image"></i>
+            <a href="/asset_thumbnail">Add/Update Asset Thumbnail</a>
+        </div>
+        <div class="card">
+            <i class="fas fa-file-contract"></i>
+            <a href="/contract">Add/Update Contract</a>
+        </div>
+        <div class="card">
+            <i class="fas fa-door-closed"></i>
+            <a href="/room">Add/Update Room</a>
+        </div>
+        <div class="card">
+            <i class="fas fa-map"></i>
+            <a href="/map">Add/Update Map</a>
+        </div>
+    </div>
+
+    <div class="button-container" id="userButtons" style="display: none;">
+        <div class="card">
+            <i class="fas fa-map-marked-alt"></i>
+            <a href="/map_render">Render Map</a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2024 Admin Dashboard. All Rights Reserved.</p>
+    <p>Powered by <a href="https://example.com" target="_blank">YourCompany</a></p>
+</footer>
+
+<script>
+    const toggleSwitch = document.getElementById("toggleSwitch");
+    const toggleKnob = document.getElementById("toggleKnob");
+    const adminButtons = document.getElementById("adminButtons");
+    const userButtons = document.getElementById("userButtons");
+
+    toggleSwitch.addEventListener("click", () => {
+        const isAdminView = toggleKnob.classList.contains("admin-view");
+        toggleKnob.classList.toggle("admin-view", !isAdminView);
+        toggleKnob.classList.toggle("user-view", isAdminView);
+        adminButtons.style.display = isAdminView ? "none" : "flex";
+        userButtons.style.display = isAdminView ? "flex" : "none";
+    });
+</script>
+
+</body>
+</html>

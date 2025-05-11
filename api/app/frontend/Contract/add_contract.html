@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Contract</title>
+    <link rel="stylesheet" href="/frontend/Asset/styles.css"> <!-- Link to shared CSS file -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">Admin<span>Dashboard</span></div>
+        <nav class="nav">
+            <a href="/" onclick="if (location.pathname === '/') location.reload()">Dashboard</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2>Add New Contract</h2>
+            <form id="contractForm">
+                <label for="start_date">Start Date:</label>
+                <input type="date" id="start_date" name="start_date" required>
+                
+                <label for="end_date">End Date:</label>
+                <input type="date" id="end_date" name="end_date" required>
+
+                <label for="is_expired_flag">Is Expired:</label>
+                <select id="is_expired_flag" name="is_expired_flag" required>
+                    <option value="false">No</option>
+                    <option value="true">Yes</option>
+                </select>
+
+                <label for="asset_id">Asset ID:</label>
+                <input type="number" id="asset_id" name="asset_id" required>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="responseMessage">Please fill out the form and submit.</div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Admin Dashboard. All Rights Reserved.</p>
+        <p>Powered by <a href="https://example.com" target="_blank">YourCompany</a></p>
+    </footer>
+
+    <script src="/frontend/Contract/script.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>

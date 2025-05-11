@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Render Map</title>
+    <link rel="stylesheet" href="/frontend/MapRender/styles.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="search-bar">
+        <input type="text" id="map_building" placeholder="Enter Building Name" list="buildingList" />
+        <input type="number" id="map_floor" placeholder="Enter Floor Number" />
+        <select id="assetNameFilter">
+            <option value="">Select Asset Name</option>
+        </select>
+        <select id="assetTypeFilter">
+            <option value="">Select Asset Type</option>
+        </select>
+        <button id="searchButton">Search</button>
+        <button id="toggleGrid">Toggle Grid</button>
+        <button id="toggleMap">Toggle Map</button>
+        <button id="dealSummary">Summary</button>
+    </div>
+
+    <div class="map-container">
+        <canvas class="grid-overlay" id="gridOverlay"></canvas>
+        <img id="mapImage" src="" alt="Map will appear here" />
+        <div id="assetContainer" class="asset-container"></div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="/frontend/MapRender/script.js"></script>
+</body>
+</html>

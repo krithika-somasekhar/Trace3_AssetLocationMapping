@@ -1,0 +1,12 @@
+DELIMITER //
+
+CREATE EVENT IF NOT EXISTS UpdateExpiredContracts
+ON SCHEDULE EVERY 1 DAY
+DO
+BEGIN
+    UPDATE Contract
+    SET is_expired_flag = TRUE
+    WHERE end_date < CURDATE();
+END //
+
+DELIMITER ;

@@ -1,0 +1,68 @@
+CREATE TABLE AssetThumbnail (
+    asset_thumb_id INT AUTO_INCREMENT PRIMARY KEY,
+    asset_thumb_name VARCHAR(255) NOT NULL,
+    asset_thumb_url VARCHAR(500) NOT NULL
+);
+
+-- Table: Map
+CREATE TABLE Map (
+    map_id INT AUTO_INCREMENT PRIMARY KEY,
+    map_building VARCHAR(255) NOT NULL,
+    map_floor INT NOT NULL,
+    map_url VARCHAR(500) NOT NULL
+);
+
+-- Table: Room
+CREATE TABLE Room (
+    room_id INT AUTO_INCREMENT PRIMARY KEY,
+    room_name VARCHAR(255) NOT NULL,
+    room_floor_no INT NOT NULL,
+    room_shape ENUM('rectangle', 'semicircle', 'square') NOT NULL,
+    gridxx VARCHAR(255) NOT NULL,
+    gridxy VARCHAR(255) NOT NULL,
+    gridyx VARCHAR(255) NOT NULL,
+    gridyy VARCHAR(255) NOT NULL,
+    map_id INT,
+    FOREIGN KEY (map_id) REFERENCES Map(map_id) ON DELETE SET NULL
+);
+
+-- Table: Department
+CREATE TABLE Department (
+    department_id INT AUTO_INCREMENT PRIMARY KEY,
+    department_name VARCHAR(255) NOT NULL,
+    gridxx VARCHAR(255) NOT NULL,
+    gridxy VARCHAR(255) NOT NULL,
+    gridyx VARCHAR(255) NOT NULL,
+    gridyy VARCHAR(255) NOT NULL,
+    map_id INT,
+    FOREIGN KEY (map_id) REFERENCES Map(map_id) ON DELETE SET NULL
+);
+
+-- Table: Asset
+CREATE TABLE Asset (
+    asset_id INT AUTO_INCREMENT PRIMARY KEY,
+    asset_name VARCHAR(255) NOT NULL,
+    asset_type VARCHAR(100) NOT NULL,
+    asset_thumb_id INT,
+    room_id INT,
+    gridx INT NOT NULL,
+    gridy INT NOT NULL,
+    FOREIGN KEY (asset_thumb_id) REFERENCES AssetThumbnail(asset_thumb_id) ON DELETE SET NULL,
+    FOREIGN KEY (room_id) REFERENCES Room(room_id) ON DELETE SET NULL
+);
+
+-- Table: Contract
+CREATE TABLE Contract (
+    contract_id INT AUTO_INCREMENT PRIMARY KEY,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    is_expired_flag BOOLEAN DEFAULT FALSE,
+    asset_id INT,
+    FOREIGN KEY (asset_id) REFERENCES Asset(asset_id) ON DELETE CASCADE
+);
+
+-- altering asset table by referencing department_id in it
+
+ALTER TABLE Asset
+ADD COLUMN department_id INT,  -- Add the department_id column
+ADD FOREIGN KEY (department_id) REFERENCES Department(department_id) ON DELETE SET NULL;  -- Foreign key reference to Department table

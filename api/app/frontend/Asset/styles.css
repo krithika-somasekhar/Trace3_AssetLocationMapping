@@ -1,0 +1,157 @@
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #74ebd5, #9face6); /* Gradient background */
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between; /* Align logo and navigation */
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 98%;
+    z-index: 1000;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header .logo span {
+    color: #74ebd5; /* Highlight color for "Dashboard" */
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #74ebd5;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px 20px; /* Add space for the fixed header */
+}
+
+/* Container */
+.container {
+    width: 400px;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #74ebd5;
+    padding-bottom: 10px;
+}
+
+/* Form Label */
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Input Fields */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #74ebd5;
+    outline: none;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.02);
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer a {
+    color: #74ebd5;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Response Message */
+#responseMessage {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+#responseMessage.success {
+    color: #28a745;
+}
+
+#responseMessage.error {
+    color: #dc3545;
+}
+
+#responseMessage.info {
+    color: #6c757d;
+}

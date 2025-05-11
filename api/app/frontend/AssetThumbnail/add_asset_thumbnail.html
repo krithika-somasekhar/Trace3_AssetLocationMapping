@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Asset Thumbnail</title>
+    <link rel="stylesheet" href="/frontend/Asset/styles.css"> <!-- Link to shared CSS file -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">Admin<span>Dashboard</span></div>
+        <nav class="nav">
+            <a href="/" onclick="if (location.pathname === '/') location.reload()">Dashboard</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2>Add New Asset Thumbnail</h2>
+            <form id="assetThumbnailForm" enctype="multipart/form-data">
+                <label for="asset_thumb_name">Asset Thumbnail Name:</label>
+                <input type="text" id="asset_thumb_name" name="asset_thumb_name" required>
+                
+                <label for="asset_thumb_id">Asset Thumbnail ID (Optional):</label>
+                <input type="number" id="asset_thumb_id" name="asset_thumb_id">
+                
+                <label for="file">Thumbnail Image File:</label>
+                <input type="file" id="file" name="file" accept=".jpg,.jpeg,.png,.bmp,.gif" required>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="responseMessage">Please fill out the form and submit.</div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Admin Dashboard. All Rights Reserved.</p>
+        <p>Powered by <a href="https://example.com" target="_blank">YourCompany</a></p>
+    </footer>
+
+    <script src="/frontend/AssetThumbnail/script.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>

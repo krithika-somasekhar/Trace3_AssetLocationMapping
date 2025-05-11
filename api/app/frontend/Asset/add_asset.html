@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Asset</title>
+    <link rel="stylesheet" href="/frontend/Asset/styles.css"> <!-- Link to CSS file -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">Admin<span>Dashboard</span></div>
+        <nav class="nav">
+            <a href="/" onclick="if (location.pathname === '/') location.reload()">Dashboard</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2>Add New Asset</h2>
+            <form id="assetForm" enctype="multipart/form-data">
+                <label for="asset_name">Asset Name:</label>
+                <input type="text" id="asset_name" name="asset_name" required>
+                
+                <label for="asset_type">Asset Type:</label>
+                <input type="text" id="asset_type" name="asset_type" required>
+
+                <label for="asset_thumb_id">Asset Thumbnail ID (Optional):</label>
+                <input type="number" id="asset_thumb_id" name="asset_thumb_id">
+
+                <label for="room_id">Room ID (Optional):</label>
+                <input type="number" id="room_id" name="room_id">
+
+                <label for="gridx">Grid X (Optional):</label>
+                <input type="number" id="gridx" name="gridx" placeholder="Enter Grid X Coordinate">
+
+                <label for="gridy">Grid Y (Optional):</label>
+                <input type="number" id="gridy" name="gridy" placeholder="Enter Grid Y Coordinate">
+                
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="responseMessage">Please fill out the form and submit.</div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Admin Dashboard. All Rights Reserved.</p>
+        <p>Powered by <a href="https://example.com" target="_blank">YourCompany</a></p>
+    </footer>
+
+<script src="/frontend/Asset/script.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>
